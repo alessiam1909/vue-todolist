@@ -16,6 +16,9 @@ body{
 .container{
     background-color: rgb(89, 193, 189);
     width: 50%;
+    margin: 150px 0;
+    border-radius: 20px;
+    border: 5px dashed rgb(13, 76, 146)  ;
 }
 
 h1{
@@ -40,4 +43,50 @@ li{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 0;
+    font-weight: 600;
+    text-decoration: wavy;
+}
+
+.container-buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    margin-left: 20px;
+    border: none;
+}
+
+.tick:active{
+    background-color: rgb(59, 167, 59);
+}
+
+.delete:active{
+    background-color: rgb(196, 14, 14);
+}
+
+.container-input{
+    width: 50%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input{
+    width: 70%;
+    height: 50px;
+    border-radius: 20px;
+    border:none;
+    color: rgb(13, 76, 146);
+    background-color: rgb(160, 228, 203);
+    border: 2px solid rgb(13, 76, 146)
+}
+
+.add{
+    width: 20%;
+    height: 50px;
+    border-radius: 20px;
+    color:rgb(13, 76, 146) ;
+    background-color: rgb(160, 228, 203);
+    border: 2px solid rgb(13, 76, 146) ;
 }

@@ -12,15 +12,18 @@
         <div class="container" id="app">
             <h1>La mia To-Do-List:</h1>
             <ul class="unstyled">
-                <li v-for="(elem, index) in todolist" v-bind:class="(todolist[index].done === true) ? 'checked' : ''">
-                    {{index + 1}} - {{todolist[index].text}} 
-                    <div>
-                        <button @click="taskFatta(index)"><i class="fa-solid fa-check"></i></button>  <button @click="eliminaTask(index)"><i class="fa-solid fa-xmark"></i></button></li>
+                <li v-for="(elem, index) in todolist">
+                    <p  v-bind:class="(todolist[index].done === true) ? 'checked' : ''">{{index + 1}} - {{todolist[index].text}}</p> 
+                    <div class="container-buttons">
+                        <button @click="taskFatta(index)" class="tick"><i class="fa-solid fa-check"></i></button>  <button @click="eliminaTask(index)" class="delete"><i class="fa-solid fa-xmark"></i></button>
                     </div>
+                </li>
                         
             </ul>
-            <input type="text" placeholder="Aggiungi task" v-model="newTask" @keyup.enter="aggiungiTask">
-            <button @click="aggiungiTask">Aggiungi</button>
+            <div class="container-input">
+                <input type="text" placeholder="  Aggiungi task" v-model="newTask" @keyup.enter="aggiungiTask">
+                <button @click="aggiungiTask" class="add">Aggiungi</button>
+            </div>
         </div>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <script type="text/javascript" src="./Js/script.js"></script>
