@@ -15,7 +15,7 @@
                 <li v-for="(elem, index) in todolist" v-bind:class="(todolist[index].done === true) ? 'checked' : ''">
                     {{index + 1}} - {{todolist[index].text}} <button @click="taskFatta(index)"><i class="fa-solid fa-check"></i></button>  <button @click="eliminaTask(index)"><i class="fa-solid fa-xmark"></i></button></li>
             </ul>
-            <input type="text" placeholder="Aggiungi task" v-model="newTask">
+            <input type="text" placeholder="Aggiungi task" v-model="newTask" @keyup.enter="aggiungiTask">
             <button @click="aggiungiTask">Aggiungi</button>
         </div>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
