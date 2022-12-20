@@ -15,7 +15,7 @@ createApp({
             },
             {
                 text: "Scegliere il menù di Natale",
-                done: true,
+                done: false,
             },
             {
                 text: "Finire gli acquisti per i regali di Natale",
@@ -46,7 +46,16 @@ methods: {
         this.newTask = '';
     },
     taskFatta(index){
-
+        let task = this.todolist[index];
+        if(task.done == true) {
+            task.done = false;
+        }
+        else{
+            task.done = true;
+        }
+    },
+    eliminaTask(index){
+        this.todolist.splice(index, 1)
     }
 
 
