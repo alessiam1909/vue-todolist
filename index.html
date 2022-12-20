@@ -5,9 +5,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/style.css">
-        <title>To-do-list con Vue</title>
+        <title>To-do-list</title>
     </head>
     <body>
+        <div class="container" id="app">
+            <h1>La mia To-Do-List:</h1>
+            <ul class="unstyled">
+                <li v-for="(elem, index) in todolist">
+                    {{index + 1}} - {{todolist[index].text}}</li>
+            </ul>
+            <input type="text" placeholder="Aggiungi task" v-model="newTask">
+            <button @click="aggiungiTask">Aggiungi</button>
+        </div>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <script type="text/javascript" src="./Js/script.js"></script>
     </body>
