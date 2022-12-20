@@ -11,7 +11,7 @@
         <div class="container" id="app">
             <h1>La mia To-Do-List:</h1>
             <ul class="unstyled">
-                <li v-for="(elem, index) in todolist">
+                <li v-for="(elem, index) in todolist" v-bind:class="(todolist[index].done === true) ? 'checked' : ''">
                     {{index + 1}} - {{todolist[index].text}}</li>
             </ul>
             <input type="text" placeholder="Aggiungi task" v-model="newTask">

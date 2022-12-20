@@ -15,7 +15,7 @@ createApp({
             },
             {
                 text: "Scegliere il menù di Natale",
-                done: false,
+                done: true,
             },
             {
                 text: "Finire gli acquisti per i regali di Natale",
@@ -38,12 +38,15 @@ createApp({
 },
 methods: {
     aggiungiTask(){
-        let task = {
+        let nuovaTask = {
             text: this.newTask,
             done: false
         };
-        this.todolist.push(task);
+        this.todolist.push(nuovaTask);
         this.newTask = '';
+    },
+    taskFatta(index){
+
     }
 
 
